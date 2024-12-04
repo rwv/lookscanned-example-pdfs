@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router'
 import { parse } from 'marked'
 import DOMPurify from 'dompurify'
 import { computed } from 'vue'
-
+import ScannerSvg from '../components/ScannerSvg.vue'
 const route = useRoute()
 const lang = route.params.lang
 
@@ -32,8 +32,31 @@ const style = computed(() => {
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
 </style>
 
+<style scoped>
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+}
+
+.align-middle {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  font-size: 1.3rem;
+}
+</style>
+
 <template>
-  <main>
+  <main class="container">
+    <h1 :style="style">
+      <div class="align-middle">
+        <ScannerSvg class="icon" />
+        <span>Look Scanned</span>
+      </div>
+    </h1>
     <div v-html="markdownHTML" :style="style"></div>
   </main>
 </template>
