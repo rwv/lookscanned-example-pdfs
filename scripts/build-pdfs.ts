@@ -1,13 +1,13 @@
 import { exec } from 'child_process'
 import puppeteer, { type Browser } from 'puppeteer'
-import { dirname, resolve } from 'path'
+import { dirname, resolve, join } from 'path'
 import { mkdir, rm } from 'fs/promises'
 import { promisify } from 'util'
 import express from 'express'
 import { markdowns } from '../src/locales/how-to-use/markdowns'
 
 const execAsync = promisify(exec)
-const outputDir = resolve('./pdfs')
+const outputDir = resolve('./public/pdfs')
 const langs = Object.keys(markdowns)
 
 // remove the output dir
@@ -58,7 +58,7 @@ async function generatePDF(browser: Browser, port: number, path: string) {
   console.log(`🔗 Navigating to ${url}...`)
   await page.goto(url, { waitUntil: 'networkidle0' })
 
-  const pdfPath = resolve(`./pdfs${path}.pdf`)
+  const pdfPath = join(outputDir, `${path}.pdf`)
   await mkdir(dirname(pdfPath), { recursive: true })
   await page.pdf({ path: pdfPath, format: 'a4' })
   const cleanedPdfPath = pdfPath
