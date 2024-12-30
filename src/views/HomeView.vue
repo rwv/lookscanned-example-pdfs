@@ -5,7 +5,10 @@
       <h2>How to use Look Scanned</h2>
       <ul>
         <li v-for="lang in langs" :key="lang">
-          <a :href="`/how-to-use/${lang}`" :lang="lang">{{ languages[lang] }} ({{ lang }})</a>
+          <a :href="`/how-to-use/${lang}`" :lang="lang">
+            <span lang="en" class="lang-code">{{ lang }} / </span>
+            {{ languages[lang] }}
+          </a>
         </li>
       </ul>
       <h2>License</h2>
@@ -38,5 +41,9 @@ const langs = Object.keys(markdowns).sort() as (keyof typeof markdowns)[]
 
 .home-body h2 {
   font-size: 1.17em;
+}
+
+.lang-code {
+  font-family: monospace;
 }
 </style>

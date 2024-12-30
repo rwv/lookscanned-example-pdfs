@@ -2,6 +2,10 @@ body {
   font-family: 'Noto Serif';
 }
 
+:lang(en) {
+  font-family: 'Noto Serif';
+}
+
 :lang(zh-CN),
 :lang(zh) {
   font-family: 'Noto Serif SC';

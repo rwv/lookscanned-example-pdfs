@@ -1,7 +1,7 @@
 export const languages = {
   zh: '中文',
   'zh-CN': '简体中文',
-  'zh-TW': '繁體中文（台灣）',
+  'zh-TW': '繁體中文（臺灣）',
   'zh-HK': '繁體中文（香港）',
   en: 'English',
   ja: '日本語',
