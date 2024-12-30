@@ -68,7 +68,7 @@ h1 {
 
 <template>
   <main class="container">
-    <h1 :style="style">
+    <h1>
       <div class="align-middle">
         <ScannerSvg class="icon" />
         <span>Look Scanned</span>
