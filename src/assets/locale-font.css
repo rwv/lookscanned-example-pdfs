@@ -1,44 +1,44 @@
 body {
-  font-family: 'Noto Serif';
+  font-family: 'Noto Serif', serif;
 }
 
 :lang(en) {
-  font-family: 'Noto Serif';
+  font-family: 'Noto Serif', serif;
 }
 
 :lang(zh-CN),
 :lang(zh) {
-  font-family: 'Noto Serif SC';
+  font-family: 'Noto Serif SC', 'Noto Serif', serif;
 }
 
 :lang(zh-TW) {
-  font-family: 'Noto Serif TC';
+  font-family: 'Noto Serif TC', 'Noto Serif', serif;
 }
 
 :lang(zh-HK) {
-  font-family: 'Noto Serif HK';
+  font-family: 'Noto Serif HK', 'Noto Serif', serif;
 }
 
 :lang(ja) {
-  font-family: 'Noto Serif JP';
+  font-family: 'Noto Serif JP', 'Noto Serif', serif;
 }
 
 :lang(ko) {
-  font-family: 'Noto Serif KR';
+  font-family: 'Noto Serif KR', 'Noto Serif', serif;
 }
 
 :lang(hi) {
-  font-family: 'Noto Serif Devanagari';
+  font-family: 'Noto Serif Devanagari', 'Noto Serif', serif;
 }
 
 :lang(th) {
-  font-family: 'Noto Serif Thai';
+  font-family: 'Noto Serif Thai', 'Noto Serif', serif;
 }
 
 :lang(he) {
-  font-family: 'Noto Serif Hebrew';
+  font-family: 'Noto Serif Hebrew', 'Noto Serif', serif;
 }
 
 :lang(ar) {
-  font-family: 'Noto Serif Arabic';
+  font-family: 'Noto Serif Arabic', 'Noto Serif', serif;
 }
