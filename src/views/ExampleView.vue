@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <section>
     <h1>
       <div class="align-middle">
         <ScannerSvg class="icon" />
@@ -7,7 +7,7 @@
       </div>
     </h1>
     <MarkdownContent />
-  </main>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -30,21 +30,5 @@ import MarkdownContent from '@/components/MarkdownContent.vue'
 h1 {
   font-family: system-ui !important;
   font-weight: 600 !important;
-}
-
-.container {
-  font-size: 1.3rem;
-  /* A4 size */
-  width: 210mm;
-  /* align center */
-  margin: 0 auto;
-  padding: 1in;
-}
-</style>
-
-<style>
-@page {
-  size: A4;
-  margin: 0cm; /* Default print margin */
 }
 </style>
