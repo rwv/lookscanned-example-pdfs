@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { markdowns } from '../locales/examples/markdowns'
+import { markdowns } from '../locales/how-to-use/markdowns'
 import { useRoute, useRouter } from 'vue-router'
 import { parse } from 'marked'
 import DOMPurify from 'dompurify'
@@ -10,9 +10,6 @@ import { useHead } from '@unhead/vue'
 const route = useRoute()
 const router = useRouter()
 const lang = route.params.lang as string
-const modules = import.meta.glob('../locales/examples/markdowns/*.md', { eager: true })
-
-console.log(modules)
 
 const markdown = computed(() => {
   // if lang not in markdowns, redirect to home
