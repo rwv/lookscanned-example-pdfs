@@ -47,6 +47,7 @@ const style = computed(() => {
 
 h1 {
   font-family: system-ui !important;
+  font-weight: 600 !important;
 }
 
 .container {
@@ -56,6 +57,10 @@ h1 {
   /* align center */
   margin: 0 auto;
   padding: 1in;
+}
+
+.markdown {
+  font-size: 1.5rem;
 }
 </style>
 
@@ -74,6 +79,6 @@ h1 {
         <span>Look Scanned</span>
       </div>
     </h1>
-    <div v-html="markdownHTML" :style="style"></div>
+    <div v-html="markdownHTML" :style="style" class="markdown"></div>
   </main>
 </template>
