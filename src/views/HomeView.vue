@@ -5,7 +5,7 @@
       <h2>How to use Look Scanned</h2>
       <ul>
         <li v-for="lang in langs" :key="lang">
-          <a :href="`/how-to-use/${lang}`">{{ lang }}</a>
+          <a :href="`/how-to-use/${lang}`" :lang="lang">{{ languages[lang] }} ({{ lang }})</a>
         </li>
       </ul>
       <h2>License</h2>
@@ -17,7 +17,9 @@
 <script setup lang="ts">
 import SiteTitle from '@/components/SiteTitle.vue'
 import { markdowns } from '@/locales/how-to-use/markdowns'
-const langs = Object.keys(markdowns).sort()
+import { languages } from '@/locales/display'
+
+const langs = Object.keys(markdowns).sort() as (keyof typeof markdowns)[]
 </script>
 
 <style scoped>

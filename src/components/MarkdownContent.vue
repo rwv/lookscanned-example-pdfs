@@ -52,7 +52,6 @@ useHead({
 </script>
 
 <style scoped>
-/* https://fonts.google.com/share?selection.family=Noto+Naskh+Arabic:wght@400..700|Noto+Serif+Devanagari:wght@100..900|Noto+Serif+HK:wght@200..900|Noto+Serif+Hebrew:wght@100..900|Noto+Serif+JP:wght@200..900|Noto+Serif+KR:wght@200..900|Noto+Serif+SC:wght@200..900|Noto+Serif+Thai:wght@100..900|Noto+Serif:ital,wght@0,100..900;1,100..900 */
 .markdown {
   font-family: 'Noto Serif';
   font-size: 1.5rem;
