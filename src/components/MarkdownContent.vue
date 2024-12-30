@@ -3,8 +3,9 @@ import zhCNMarkdown from '../locales/examples/markdowns/zh-CN.md?raw'
 import { useRoute } from 'vue-router'
 import { parse } from 'marked'
 import DOMPurify from 'dompurify'
-import { computedAsync, useTitle } from '@vueuse/core'
+import { computedAsync } from '@vueuse/core'
 import { computed } from 'vue'
+import { useHead } from '@unhead/vue'
 
 const route = useRoute()
 const lang = route.params.lang
@@ -24,7 +25,22 @@ const title = computed(() => {
   return match ? match[1] : 'Look Scanned'
 })
 
-useTitle(title)
+const description = computed(() => {
+  const lines = markdown.value.split('\n')
+  // remove empty lines
+  const nonEmptyLines = lines.filter((line) => line.trim() !== '')
+  return nonEmptyLines[1]
+})
+
+useHead({
+  title: title,
+  meta: [
+    {
+      name: 'description',
+      content: description,
+    },
+  ],
+})
 </script>
 
 <style></style>
