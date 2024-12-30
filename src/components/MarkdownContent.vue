@@ -56,7 +56,6 @@ useHead({
 <style scoped>
 /* Noto Serif SC */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 .markdown {
   font-family: 'Noto Serif';
