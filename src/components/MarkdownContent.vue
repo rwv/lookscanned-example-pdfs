@@ -3,16 +3,28 @@ import zhCNMarkdown from '../locales/examples/markdowns/zh-CN.md?raw'
 import { useRoute } from 'vue-router'
 import { parse } from 'marked'
 import DOMPurify from 'dompurify'
-import { computedAsync } from '@vueuse/core'
+import { computedAsync, useTitle } from '@vueuse/core'
+import { computed } from 'vue'
 
 const route = useRoute()
 const lang = route.params.lang
 
+const markdown = computed(() => {
+  return zhCNMarkdown
+})
+
 const markdownHTML = computedAsync(async () => {
   // get markdown
-  const markdown = zhCNMarkdown
-  return DOMPurify.sanitize(await parse(markdown))
+  return DOMPurify.sanitize(await parse(markdown.value))
 })
+
+const title = computed(() => {
+  const re = /##\s+(.*)/
+  const match = markdown.value.match(re)
+  return match ? match[1] : 'Look Scanned'
+})
+
+useTitle(title)
 </script>
 
 <style></style>
