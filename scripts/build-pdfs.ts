@@ -4,9 +4,11 @@ import { dirname, resolve } from 'path'
 import { mkdir, rm } from 'fs/promises'
 import { promisify } from 'util'
 import express from 'express'
+import { markdowns } from '../src/locales/how-to-use/markdowns'
 
 const execAsync = promisify(exec)
 const outputDir = resolve('./pdfs')
+const langs = Object.keys(markdowns)
 
 // remove the output dir
 await rm(outputDir, { recursive: true, force: true })
@@ -76,7 +78,7 @@ async function main() {
     const { port, server } = await serveDist()
 
     // Step 3: Generate PDFs
-    const paths = ['/how-to-use/zh-CN', '/how-to-use/en']
+    const paths = langs.map((lang) => `/how-to-use/${lang}`)
     const browser = await puppeteer.launch({
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
