@@ -49,6 +49,19 @@ async function serveDist() {
   return { port, server }
 }
 
+// YYYY:MM:DD HH:MM:SS±HH:MM
+async function getGitCommitUTC() {
+  const { stdout } = await execAsync('git log -1 --format=%at')
+  const commitTimestamp = parseInt(stdout.trim())
+  const commitDate = new Date(commitTimestamp * 1000)
+  return commitDate
+    .toISOString()
+    .replace('T', ' ')
+    .replace(/\.\d+Z$/, '+00:00')
+}
+const gitCommitUTC = await getGitCommitUTC()
+console.log('🕒 Git commit time:', gitCommitUTC)
+
 // Generate a PDF from a given path
 async function generatePDF(browser: Browser, port: number, path: string) {
   console.log(`📄 Generating PDF for ${path}...`)
@@ -61,6 +74,12 @@ async function generatePDF(browser: Browser, port: number, path: string) {
   const pdfPath = join(outputDir, `${path}.pdf`)
   await mkdir(dirname(pdfPath), { recursive: true })
   await page.pdf({ path: pdfPath, format: 'a4' })
+
+  // modify the pdf file creation and modification time to the git commit time
+  await execAsync(
+    ['exiftool', '-overwrite_original', `-AllDates="${gitCommitUTC}"`, pdfPath].join(' '),
+  )
+
   const cleanedPdfPath = pdfPath
   console.log('🧹 Cleaning PDF...')
   await execAsync(['mutool', 'clean', '-gggg', pdfPath, cleanedPdfPath].join(' '))
