@@ -74,6 +74,10 @@ useHead({
 .markdown :deep(h2) {
   font-size: 1.17em;
 }
+
+.markdown :deep(p) {
+  text-align: justify;
+}
 </style>
 
 <template>
