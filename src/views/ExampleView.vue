@@ -59,6 +59,13 @@ h1 {
 }
 </style>
 
+<style>
+@page {
+  size: A4;
+  margin: 0cm; /* Default print margin */
+}
+</style>
+
 <template>
   <main class="container">
     <h1 :style="style">
