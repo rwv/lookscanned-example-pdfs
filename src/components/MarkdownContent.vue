@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import zhCNMarkdown from '../locales/examples/markdowns/zh-CN.md?raw'
-import { useRoute } from 'vue-router'
+import { markdowns } from '../locales/examples/markdowns'
+import { useRoute, useRouter } from 'vue-router'
 import { parse } from 'marked'
 import DOMPurify from 'dompurify'
 import { computedAsync } from '@vueuse/core'
@@ -8,10 +8,21 @@ import { computed } from 'vue'
 import { useHead } from '@unhead/vue'
 
 const route = useRoute()
-const lang = route.params.lang
+const router = useRouter()
+const lang = route.params.lang as string
+const modules = import.meta.glob('../locales/examples/markdowns/*.md', { eager: true })
+
+console.log(modules)
 
 const markdown = computed(() => {
-  return zhCNMarkdown
+  // if lang not in markdowns, redirect to home
+  if (!(lang in markdowns)) {
+    // eslint-disable-next-line
+    router.push('/')
+  }
+  const markdown = markdowns[lang as keyof typeof markdowns]
+
+  return markdown
 })
 
 const markdownHTML = computedAsync(async () => {
@@ -48,14 +59,15 @@ useHead({
 <style scoped>
 /* Noto Serif SC */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 .markdown {
+  font-family: 'Noto Serif';
   font-size: 1.5rem;
 }
 
 .zh-CN {
-  font-family: 'Noto Serif SC', serif;
-  font-style: normal;
+  font-family: 'Noto Serif SC';
 }
 
 .markdown :deep(a) {
