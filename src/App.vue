@@ -18,6 +18,13 @@ import { RouterView } from 'vue-router'
   padding: 1in;
 }
 
+@media print {
+  .container {
+    /* margin: 0; */
+    padding: 0;
+  }
+}
+
 @media screen {
   .container {
     /* add shadow */
@@ -31,6 +38,6 @@ import { RouterView } from 'vue-router'
 <style>
 @page {
   size: A4;
-  margin: 0cm; /* Default print margin */
+  margin: 1in; /* Default print margin */
 }
 </style>
