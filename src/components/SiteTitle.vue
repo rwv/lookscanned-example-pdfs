@@ -1,10 +1,12 @@
 <template>
-  <h1>
-    <div class="align-middle">
-      <ScannerSvg class="icon" />
-      <span>Look Scanned</span>
-    </div>
-  </h1>
+  <nav>
+    <h2 class="site-title">
+      <div class="align-middle">
+        <ScannerSvg class="icon" />
+        <span>Look Scanned</span>
+      </div>
+    </h2>
+  </nav>
 </template>
 
 <script setup lang="ts">
@@ -25,7 +27,7 @@ import ScannerSvg from '../components/ScannerSvg.vue'
   align-items: center;
 }
 
-h1 {
+.site-title {
   font-family: 'Noto Serif';
   font-weight: 600;
   font-size: 1.5em;

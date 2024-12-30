@@ -28,7 +28,7 @@ const markdownHTML = computedAsync(async () => {
 })
 
 const title = computed(() => {
-  const re = /##\s+(.*)/
+  const re = /#\s+(.*)/
   const match = markdown.value.match(re)
   return match ? match[1] : 'Look Scanned'
 })
@@ -70,6 +70,10 @@ useHead({
 .markdown :deep(a) {
   color: inherit;
   text-decoration: none;
+}
+
+.markdown :deep(h2) {
+  font-size: 1.17em;
 }
 </style>
 
