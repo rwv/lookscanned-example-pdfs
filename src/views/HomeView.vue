@@ -5,10 +5,10 @@
       <h2>How to use Look Scanned</h2>
       <ul>
         <li v-for="lang in langs" :key="lang">
-          <a :href="`/how-to-use/${lang}`" :lang="lang">
+          <router-link :to="`/how-to-use/${lang}`" :lang="lang">
             <span lang="en" class="lang-code">{{ lang }} / </span>
             {{ languages[lang] }}
-          </a>
+          </router-link>
         </li>
       </ul>
       <h2>License</h2>
@@ -21,6 +21,7 @@
 import SiteTitle from '@/components/SiteTitle.vue'
 import { markdowns } from '@/locales/how-to-use/markdowns'
 import { languages } from '@/locales/display'
+import { RouterLink } from 'vue-router'
 
 const langs = Object.keys(markdowns).sort() as (keyof typeof markdowns)[]
 </script>
