@@ -45,8 +45,4 @@ const route = useRoute()
   size: A4;
   margin: 1in; /* Default print margin */
 }
-
-body {
-  font-family: 'Noto Serif', serif;
-}
 </style>

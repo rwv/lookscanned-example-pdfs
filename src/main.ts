@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import { createHead } from '@unhead/vue'
 
+import './assets/locale-font.css'
+
 const app = createApp(App)
 
 app.use(router)

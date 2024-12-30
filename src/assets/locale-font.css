@@ -1,0 +1,40 @@
+body {
+  font-family: 'Noto Serif';
+}
+
+:lang(zh-CN),
+:lang(zh) {
+  font-family: 'Noto Serif SC';
+}
+
+:lang(zh-TW) {
+  font-family: 'Noto Serif TC';
+}
+
+:lang(zh-HK) {
+  font-family: 'Noto Serif HK';
+}
+
+:lang(ja) {
+  font-family: 'Noto Serif JP';
+}
+
+:lang(ko) {
+  font-family: 'Noto Serif KR';
+}
+
+:lang(hi) {
+  font-family: 'Noto Serif Devanagari';
+}
+
+:lang(th) {
+  font-family: 'Noto Serif Thai';
+}
+
+:lang(he) {
+  font-family: 'Noto Serif Hebrew';
+}
+
+:lang(ar) {
+  font-family: 'Noto Serif Arabic';
+}

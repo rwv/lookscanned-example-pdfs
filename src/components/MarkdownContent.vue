@@ -51,19 +51,11 @@ useHead({
 })
 </script>
 
-<style></style>
-
 <style scoped>
-/* Noto Serif SC */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
-
+/* https://fonts.google.com/share?selection.family=Noto+Naskh+Arabic:wght@400..700|Noto+Serif+Devanagari:wght@100..900|Noto+Serif+HK:wght@200..900|Noto+Serif+Hebrew:wght@100..900|Noto+Serif+JP:wght@200..900|Noto+Serif+KR:wght@200..900|Noto+Serif+SC:wght@200..900|Noto+Serif+Thai:wght@100..900|Noto+Serif:ital,wght@0,100..900;1,100..900 */
 .markdown {
   font-family: 'Noto Serif';
   font-size: 1.5rem;
-}
-
-.zh-CN {
-  font-family: 'Noto Serif SC';
 }
 
 .markdown :deep(a) {
@@ -81,5 +73,5 @@ useHead({
 </style>
 
 <template>
-  <article v-html="markdownHTML" :class="lang" class="markdown"></article>
+  <article v-html="markdownHTML" :lang="lang" class="markdown"></article>
 </template>

@@ -22,7 +22,6 @@ const langs = Object.keys(markdowns).sort()
 
 <style scoped>
 .home-body {
-  font-family: 'Noto Serif', serif;
   font-size: 1.5rem;
 }
 
