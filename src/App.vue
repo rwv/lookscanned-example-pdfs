@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import ThePageControls from '@/components/ThePageControls.vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 </script>
 
 <template>
   <main class="container">
+    <ThePageControls v-if="route.path !== '/'" />
     <RouterView />
   </main>
 </template>
@@ -39,5 +44,9 @@ import { RouterView } from 'vue-router'
 @page {
   size: A4;
   margin: 1in; /* Default print margin */
+}
+
+body {
+  font-family: 'Noto Serif', serif;
 }
 </style>
