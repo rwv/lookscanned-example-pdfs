@@ -26,7 +26,7 @@ import ScannerSvg from '../components/ScannerSvg.vue'
 }
 
 h1 {
-  font-family: 'Noto Sans';
+  font-family: 'Noto Serif';
   font-weight: 600;
   font-size: 1.5em;
 }
