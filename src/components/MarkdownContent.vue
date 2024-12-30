@@ -72,5 +72,10 @@ useHead({
 </style>
 
 <template>
-  <article v-html="markdownHTML" :lang="lang" class="markdown"></article>
+  <article
+    v-html="markdownHTML"
+    :lang="lang"
+    class="markdown"
+    :dir="lang === 'ar' ? 'rtl' : 'ltr'"
+  ></article>
 </template>
