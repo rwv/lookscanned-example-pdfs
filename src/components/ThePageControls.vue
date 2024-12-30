@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
+import { computed } from 'vue'
 
 const router = useRouter()
+const route = useRoute()
+
+const pdfPath = computed(() => {
+  return `/pdfs/${route.path}.pdf`
+})
+
 const back = () => {
   router.back()
 }
@@ -16,6 +24,8 @@ const print = () => {
     <button class="button" @click="back">Back</button>
     |
     <button class="button" @click="print">Print</button>
+    |
+    <a class="button" :href="pdfPath" download>PDF</a>
   </div>
 </template>
 
