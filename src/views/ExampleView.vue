@@ -5,26 +5,27 @@ import { parse } from 'marked'
 import DOMPurify from 'dompurify'
 import { computed } from 'vue'
 import ScannerSvg from '../components/ScannerSvg.vue'
+import { computedAsync } from '@vueuse/core'
+
 const route = useRoute()
 const lang = route.params.lang
 
 const fonts = {
   'zh-CN': {
     'font-family': 'Noto Serif SC',
-    'font-optical-sizing': 'auto',
     'font-style': 'normal',
   },
 }
 
-const markdownHTML = computed(() => {
+const markdownHTML = computedAsync(async () => {
   console.log(lang)
   // get markdown
   const markdown = zhCNMarkdown
-  return DOMPurify.sanitize(parse(markdown))
+  return DOMPurify.sanitize(await parse(markdown))
 })
 
 const style = computed(() => {
-  return fonts[lang]
+  return fonts?.[lang as keyof typeof fonts] ?? {}
 })
 </script>
 
@@ -44,8 +45,17 @@ const style = computed(() => {
   align-items: center;
 }
 
+h1 {
+  font-family: system-ui !important;
+}
+
 .container {
   font-size: 1.3rem;
+  /* A4 size */
+  width: 210mm;
+  /* align center */
+  margin: 0 auto;
+  padding: 1in;
 }
 </style>
 
