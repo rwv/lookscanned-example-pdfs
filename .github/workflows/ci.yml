@@ -41,6 +41,9 @@ jobs:
       - name: TypeScript Check
         run: pnpm run type-check
 
+      - name: Install Chrome
+        run: pnpm puppeteer browsers install chrome
+
       - name: Build PDFs
         run: pnpm run build:pdfs
 
