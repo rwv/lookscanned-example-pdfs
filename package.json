@@ -1,7 +1,7 @@
 {
-  "name": "lookscanned-example-pdfs",
+  "name": "@lookscanned/how-to",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,6 +15,29 @@
     "format-check": "prettier --check src/",
     "build:pdfs": "vite-node scripts/build-pdfs.ts"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lookscanned/how-to.git"
+  },
+  "homepage": "https://github.com/lookscanned/how-to",
+  "bugs": {
+    "url": "https://github.com/lookscanned/how-to/issues"
+  },
+  "keywords": [
+    "lookscanned",
+    "how-to",
+    "documentation",
+    "pdf",
+    "markdown"
+  ],
+  "author": "lookscanned",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@unhead/vue": "^1.11.14",
     "@vueuse/core": "^12.2.0",
