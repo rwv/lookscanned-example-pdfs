@@ -1,39 +1,16 @@
-# lookscanned-example-pdfs
+# Look Scanned How To
 
-This template should help get you started developing with Vue 3 in Vite.
+[![CI](https://github.com/lookscanned/how-to/actions/workflows/ci.yml/badge.svg)](https://github.com/lookscanned/how-to/actions/workflows/ci.yml)
 
-## Recommended IDE Setup
+[how-to.lookscanned.io](https://how-to.lookscanned.io)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+This is a repository for the how-to-use documentation used in the Look Scanned project.
 
-## Type Support for `.vue` Imports in TS
+## How to add a new language
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+1. Add the corresponding markdown file to the `src/locales/how-to-use/markdowns` directory.
+2. Update the `src/locales/how-to-use/markdowns/index.ts` file to include the new markdown file.
 
-## Customize configuration
+## License
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+MIT License
