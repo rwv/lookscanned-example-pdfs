@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/lookscanned/how-to/compare/v1.1.0...v1.1.1) (2024-12-31)
+
+
+### Bug Fixes
+
+* **deps:** move all dependencies to devDependencies ([#19](https://github.com/lookscanned/how-to/issues/19)) ([64cbdba](https://github.com/lookscanned/how-to/commit/64cbdbafe508bdad02ad8d25793309808a9cddac))
+
 ## [1.1.0](https://github.com/lookscanned/how-to/compare/v1.0.2...v1.1.0) (2024-12-31)
 
 
