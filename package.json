@@ -10,7 +10,9 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
+    "lint-check": "eslint . --no-fix",
     "format": "prettier --write src/",
+    "format-check": "prettier --check src/",
     "build:pdfs": "vite-node scripts/build-pdfs.ts"
   },
   "dependencies": {
