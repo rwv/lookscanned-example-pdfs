@@ -4,6 +4,7 @@ import router from './router'
 import { createHead } from '@unhead/vue'
 
 import './assets/locale-font.css'
+import './assets/darkmode.css'
 
 const app = createApp(App)
 

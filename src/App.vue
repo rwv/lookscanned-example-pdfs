@@ -39,6 +39,12 @@ const route = useRoute()
     margin-top: 1in;
     margin-bottom: 1in;
   }
+
+  @media (prefers-color-scheme: dark) {
+    .container {
+      background-color: #2e2e2e;
+    }
+  }
 }
 </style>
 
