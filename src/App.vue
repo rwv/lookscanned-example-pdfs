@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router'
 import ThePageControls from '@/components/ThePageControls.vue'
 import { useRoute } from 'vue-router'
+import TheFooter from '@/components/TheFooter.vue'
 
 const route = useRoute()
 </script>
@@ -10,6 +11,7 @@ const route = useRoute()
   <main class="container">
     <ThePageControls v-if="route.path !== '/'" />
     <RouterView />
+    <TheFooter />
   </main>
 </template>
 
