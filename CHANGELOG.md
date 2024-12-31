@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/lookscanned/how-to/compare/v1.0.0...v1.0.1) (2024-12-31)
+
+
+### Bug Fixes
+
+* fix npm publish and add name to jobs ([#9](https://github.com/lookscanned/how-to/issues/9)) ([6086e48](https://github.com/lookscanned/how-to/commit/6086e48b3acf5d10e31232a725da23c16fa9bc24))
+
 ## 1.0.0 (2024-12-31)
 
 
