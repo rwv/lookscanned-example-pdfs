@@ -38,7 +38,7 @@ jobs:
       - name: TypeScript Check
         run: pnpm run type-check
 
-      - name: Build Sitemap
+      - name: Build PDFs
         run: pnpm run build:pdfs
 
       - name: Run build
