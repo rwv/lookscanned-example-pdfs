@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/lookscanned/how-to/compare/v1.0.2...v1.1.0) (2024-12-31)
+
+
+### Features
+
+* **footer:** add version and release link in the footer ([#14](https://github.com/lookscanned/how-to/issues/14)) ([c4ec31c](https://github.com/lookscanned/how-to/commit/c4ec31c514592464347b986b10deb7896b8bf07e))
+
 ## [1.0.2](https://github.com/lookscanned/how-to/compare/v1.0.1...v1.0.2) (2024-12-31)
 
 
