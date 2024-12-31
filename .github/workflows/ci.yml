@@ -215,6 +215,7 @@ jobs:
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
+    if: github.event_name == 'release'
     permissions:
       contents: read
       packages: write
