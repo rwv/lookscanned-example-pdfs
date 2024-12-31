@@ -1,13 +1,17 @@
 <script setup lang="ts">
+import { version } from '../../package.json'
 const gitCommit = __GIT_COMMIT__
 const gitCommitTime = __GIT_COMMIT_TIME__
 const gitShortCommit = gitCommit.slice(0, 8)
-const githubURL = `https://github.com/lookscanned/lookscanned-example-pdfs/commit/${gitCommit}`
+const githubURL = `https://github.com/lookscanned/how-to/commit/${gitCommit}`
+const releaseURL = `https://github.com/lookscanned/how-to/releases/tag/v${version}`
 </script>
 
 <template>
   <footer class="footer">
-    Git commit: <a :href="githubURL" class="github-link">{{ gitShortCommit }}</a> at
+    Version:
+    <a :href="releaseURL" class="github-link">{{ version }}</a
+    >&nbsp;<a :href="githubURL" class="github-link">({{ gitShortCommit }})</a> at
     {{ new Date(gitCommitTime).toLocaleString() }}
   </footer>
 </template>
