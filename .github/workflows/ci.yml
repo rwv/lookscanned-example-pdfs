@@ -12,6 +12,8 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -60,6 +62,8 @@ jobs:
   deploy-to-cloudflare-pages-staging:
     name: Deploy to Cloudflare Pages Staging
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     needs:
       - build
 
@@ -102,6 +106,8 @@ jobs:
   deploy-to-cloudflare-pages:
     name: Deploy to Cloudflare Pages
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     needs:
       - build
     if: github.event_name == 'release'
