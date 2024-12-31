@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/lookscanned/how-to/compare/v1.0.1...v1.0.2) (2024-12-31)
+
+
+### Bug Fixes
+
+* trigger release please action which should be triggered by [#11](https://github.com/lookscanned/how-to/issues/11) ([#12](https://github.com/lookscanned/how-to/issues/12)) ([c3bdd28](https://github.com/lookscanned/how-to/commit/c3bdd2804da8a009a64bf8f580d9c8ebe5fc476f))
+
 ## [1.0.1](https://github.com/lookscanned/how-to/compare/v1.0.0...v1.0.1) (2024-12-31)
 
 
