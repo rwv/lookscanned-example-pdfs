@@ -14,6 +14,7 @@
     "format": "prettier --write src/",
     "format-check": "prettier --check src/",
     "build:pdfs": "vite-node scripts/build-pdfs.ts",
+    "build:sitemap": "vite-node scripts/build-sitemap.ts",
     "prepare": "husky"
   },
   "publishConfig": {
@@ -61,6 +62,7 @@
     "npm-run-all2": "^7.0.2",
     "prettier": "^3.4.2",
     "puppeteer": "^23.11.1",
+    "sitemap": "^8.0.0",
     "typescript": "~5.7.2",
     "vite": "^6.0.6",
     "vite-node": "^2.1.8",
