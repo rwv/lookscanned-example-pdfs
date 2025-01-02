@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/lookscanned/how-to/compare/v1.1.1...v1.2.0) (2025-01-02)
+
+
+### Features
+
+* add sitemap and update workflows ([#27](https://github.com/lookscanned/how-to/issues/27)) ([be52597](https://github.com/lookscanned/how-to/commit/be5259751e11791ec2bdb28203ce00c1df9c7c07))
+
+
+### Bug Fixes
+
+* update PDF path computation in ThePageControls component ([#28](https://github.com/lookscanned/how-to/issues/28)) ([45a2823](https://github.com/lookscanned/how-to/commit/45a2823cfdcc8411bcd10d6db0c510745c2e18c1))
+
 ## [1.1.1](https://github.com/lookscanned/how-to/compare/v1.1.0...v1.1.1) (2024-12-31)
 
 
