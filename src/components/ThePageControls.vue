@@ -7,7 +7,7 @@ const router = useRouter()
 const route = useRoute()
 
 const pdfPath = computed(() => {
-  return `/pdfs/${route.path}.pdf`
+  return `/pdfs${route.path}.pdf`
 })
 
 const back = () => {
