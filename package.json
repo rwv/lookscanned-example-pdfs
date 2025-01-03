@@ -64,7 +64,7 @@
     "puppeteer": "^23.11.1",
     "sitemap": "^8.0.0",
     "typescript": "~5.7.2",
-    "vite": "^6.0.6",
+    "vite": "^6.0.7",
     "vite-node": "^2.1.8",
     "vite-plugin-vue-devtools": "^7.6.8",
     "vue": "^3.5.13",
