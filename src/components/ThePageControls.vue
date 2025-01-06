@@ -1,29 +1,19 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
 import { useRoute } from 'vue-router'
 import { computed } from 'vue'
 
-const router = useRouter()
 const route = useRoute()
 
 const pdfPath = computed(() => {
   return `/pdfs${route.path}.pdf`
 })
-
-const back = () => {
-  router.back()
-}
-
-const print = () => {
-  window.print()
-}
 </script>
 
 <template>
   <div class="controls">
-    <button class="button" @click="back">Back</button>
+    <router-link class="button" to="/">Back</router-link>
     |
-    <button class="button" @click="print">Print</button>
+    <a class="button" href="javascript: window.print()">Print</a>
     |
     <a class="button" :href="pdfPath" download>PDF</a>
   </div>
