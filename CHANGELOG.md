@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/lookscanned/how-to/compare/v1.2.0...v1.2.1) (2025-01-06)
+
+
+### Bug Fixes
+
+* use `/` for back control link destination ([#35](https://github.com/lookscanned/how-to/issues/35)) ([24787a6](https://github.com/lookscanned/how-to/commit/24787a6e2eb1398a21c3de42266eca9168030cb0))
+
 ## [1.2.0](https://github.com/lookscanned/how-to/compare/v1.1.1...v1.2.0) (2025-01-02)
 
 
