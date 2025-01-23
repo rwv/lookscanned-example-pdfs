@@ -45,7 +45,7 @@
     "@commitlint/config-conventional": "^19.6.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.7",
+    "@types/node": "^22.10.9",
     "@unhead/vue": "^1.11.18",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/eslint-config-prettier": "^10.2.0",
