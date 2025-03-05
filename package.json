@@ -51,7 +51,7 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.4.0",
     "@vue/tsconfig": "^0.7.0",
-    "@vueuse/core": "^12.7.0",
+    "@vueuse/core": "^12.8.2",
     "dompurify": "^3.2.4",
     "eslint": "^9.21.0",
     "eslint-plugin-vue": "^9.30.0",
