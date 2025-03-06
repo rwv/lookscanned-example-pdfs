@@ -69,8 +69,8 @@ importers:
         specifier: ^3.5.3
         version: 3.5.3
       puppeteer:
-        specifier: ^24.3.1
-        version: 24.3.1(typescript@5.7.3)
+        specifier: ^24.4.0
+        version: 24.4.0(typescript@5.7.3)
       sitemap:
         specifier: ^8.0.0
         version: 8.0.0
@@ -842,8 +842,8 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
-  '@puppeteer/browsers@2.7.1':
-    resolution: {integrity: sha512-MK7rtm8JjaxPN7Mf1JdZIZKPD2Z+W7osvrC1vjpvfOX1K0awDIHYbNi89f7eotp7eMUn2shWnt03HwVbriXtKQ==}
+  '@puppeteer/browsers@2.8.0':
+    resolution: {integrity: sha512-yTwt2KWRmCQAfhvbCRjebaSX8pV1//I0Y3g+A7f/eS7gf0l4eRJoUCvcYdVtboeU4CTOZQuqYbZNS8aBYb8ROQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1534,8 +1534,8 @@ packages:
     resolution: {integrity: sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
 
-  devtools-protocol@0.0.1402036:
-    resolution: {integrity: sha512-JwAYQgEvm3yD45CHB+RmF5kMbWtXBaOGwuxa87sZogHcLCv8c/IqnThaoQ1y60d7pXWjSKWQphPEc+1rAScVdg==}
+  devtools-protocol@0.0.1413902:
+    resolution: {integrity: sha512-yRtvFD8Oyk7C9Os3GmnFZLu53yAfsnyw1s+mLmHHUK0GQEc9zthHWvS1r67Zqzm5t7v56PILHIVZ7kmFMaL2yQ==}
 
   dompurify@3.2.4:
     resolution: {integrity: sha512-ysFSFEDVduQpyhzAob/kkuJjf5zWkZD8/A9ywSp1byueyuCfHamrCBa14/Oc2iiB0e51B+NpxSl5gmzn+Ms/mg==}
@@ -2482,12 +2482,12 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  puppeteer-core@24.3.1:
-    resolution: {integrity: sha512-585ccfcTav4KmlSmYbwwOSeC8VdutQHn2Fuk0id/y/9OoeO7Gg5PK1aUGdZjEmos0TAq+pCpChqFurFbpNd3wA==}
+  puppeteer-core@24.4.0:
+    resolution: {integrity: sha512-eFw66gCnWo0X8Hyf9KxxJtms7a61NJVMiSaWfItsFPzFBsjsWdmcNlBdsA1WVwln6neoHhsG+uTVesKmTREn/g==}
     engines: {node: '>=18'}
 
-  puppeteer@24.3.1:
-    resolution: {integrity: sha512-k0OJ7itRwkr06owp0CP3f/PsRD7Pdw4DjoCUZvjGr+aNgS1z6n/61VajIp0uBjl+V5XAQO1v/3k9bzeZLWs9OQ==}
+  puppeteer@24.4.0:
+    resolution: {integrity: sha512-E4JhJzjS8AAI+6N/b+Utwarhz6zWl3+MR725fal+s3UlOlX2eWdsvYYU+Q5bXMjs9eZEGkNQroLkn7j11s2k1Q==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3669,7 +3669,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@puppeteer/browsers@2.7.1':
+  '@puppeteer/browsers@2.8.0':
     dependencies:
       debug: 4.4.0
       extract-zip: 2.0.1
@@ -4289,9 +4289,9 @@ snapshots:
 
   chalk@5.4.1: {}
 
-  chromium-bidi@2.1.2(devtools-protocol@0.0.1402036):
+  chromium-bidi@2.1.2(devtools-protocol@0.0.1413902):
     dependencies:
-      devtools-protocol: 0.0.1402036
+      devtools-protocol: 0.0.1413902
       mitt: 3.0.1
       zod: 3.24.2
 
@@ -4419,7 +4419,7 @@ snapshots:
 
   destroy@1.2.0: {}
 
-  devtools-protocol@0.0.1402036: {}
+  devtools-protocol@0.0.1413902: {}
 
   dompurify@3.2.4:
     optionalDependencies:
@@ -5413,12 +5413,12 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@24.3.1:
+  puppeteer-core@24.4.0:
     dependencies:
-      '@puppeteer/browsers': 2.7.1
-      chromium-bidi: 2.1.2(devtools-protocol@0.0.1402036)
+      '@puppeteer/browsers': 2.8.0
+      chromium-bidi: 2.1.2(devtools-protocol@0.0.1413902)
       debug: 4.4.0
-      devtools-protocol: 0.0.1402036
+      devtools-protocol: 0.0.1413902
       typed-query-selector: 2.12.0
       ws: 8.18.1
     transitivePeerDependencies:
@@ -5427,13 +5427,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@24.3.1(typescript@5.7.3):
+  puppeteer@24.4.0(typescript@5.7.3):
     dependencies:
-      '@puppeteer/browsers': 2.7.1
-      chromium-bidi: 2.1.2(devtools-protocol@0.0.1402036)
+      '@puppeteer/browsers': 2.8.0
+      chromium-bidi: 2.1.2(devtools-protocol@0.0.1413902)
       cosmiconfig: 9.0.0(typescript@5.7.3)
-      devtools-protocol: 0.0.1402036
-      puppeteer-core: 24.3.1
+      devtools-protocol: 0.0.1413902
+      puppeteer-core: 24.4.0
       typed-query-selector: 2.12.0
     transitivePeerDependencies:
       - bare-buffer
